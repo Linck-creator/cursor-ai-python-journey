@@ -1,0 +1,20 @@
+{
+    "proximo_id": 4,
+    "tarefas": [
+        {
+            "id": 1,
+            "texto": "estudar",
+            "feito": false
+        },
+        {
+            "id": 2,
+            "texto": "limpar banheiro",
+            "feito": false
+        },
+        {
+            "id": 3,
+            "texto": "limpar quarto",
+            "feito": false
+        }
+    ]
+}
