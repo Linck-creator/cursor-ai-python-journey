@@ -1,5 +1,5 @@
 {
-    "proximo_id": 6,
+    "proximo_id": 8,
     "tarefas": [
         {
             "id": 1,
@@ -9,7 +9,7 @@
         {
             "id": 2,
             "texto": "limpar banheiro",
-            "feito": false
+            "feito": true
         },
         {
             "id": 3,
@@ -25,6 +25,18 @@
             "id": 5,
             "texto": "tarefa 1",
             "feito": false
+        },
+        {
+            "id": 6,
+            "texto": "tarefa 2",
+            "feito": false
+        },
+        {
+            "id": 7,
+            "texto": "tarefa 3",
+            "feito": false,
+            "prioridade": "Alta",
+            "data_criacao": "20/06/2026 17:18"
         }
     ]
 }

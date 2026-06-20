@@ -1,52 +1,343 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Gerenciador de Tarefas</title>
-</head>
-<body>
-    <h1>Gerenciador de Tarefas</h1>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
 
-    <p>Total de tarefas: {{ total }}</p>
+    body{
+        background:#f4f6f9;
+        padding:40px;
+    }
 
-    <h2>Pendentes</h2>
+    .container{
+        max-width:900px;
+        margin:auto;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1{
+        text-align:center;
+        color:#2c3e50;
+        margin-bottom:25px;
+    }
+
+    h2{
+        color:#34495e;
+        margin-bottom:10px;
+    }
+
+    .dashboard{
+        background:#f8f9fa;
+        padding:20px;
+        border-radius:10px;
+        margin-bottom:25px;
+    }
+
+    .dashboard p{
+        margin-bottom:8px;
+    }
+
+    .barra{
+        width:100%;
+        height:25px;
+        background:#ddd;
+        border-radius:15px;
+        overflow:hidden;
+        margin-top:10px;
+    }
+
+    .progresso{
+        height:100%;
+        background:#27ae60;
+        transition:0.5s;
+    }
+
+    .contador{
+        text-align:center;
+        margin-bottom:25px;
+        font-size:18px;
+    }
+
+    .formulario{
+        display:flex;
+        gap:10px;
+        margin-bottom:30px;
+    }
+
+    .formulario input{
+        flex:1;
+        padding:12px;
+        border:1px solid #ccc;
+        border-radius:8px;
+    }
+
+    .prioridade-select{
+        padding:12px;
+        border:1px solid #ccc;
+        border-radius:8px;
+    }
+
+    .btn-adicionar{
+        background:#27ae60;
+        color:white;
+        border:none;
+        padding:12px 20px;
+        border-radius:8px;
+        cursor:pointer;
+    }
+
+    .btn-adicionar:hover{
+        background:#219150;
+    }
+
+    .secao{
+        margin-top:25px;
+    }
+
+    .lista{
+        list-style:none;
+    }
+
+    .card{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        background:#f8f9fa;
+        padding:15px;
+        border-radius:10px;
+        margin-bottom:10px;
+        border-left:5px solid #3498db;
+    }
+
+    .concluida{
+        border-left:5px solid #27ae60;
+        background:#eefaf2;
+    }
+
+    .texto-concluido{
+        text-decoration:line-through;
+        color:#777;
+    }
+
+    .acoes{
+        display:flex;
+        gap:8px;
+    }
+
+    .btn{
+        text-decoration:none;
+        color:white;
+        padding:8px 12px;
+        border-radius:6px;
+        font-size:14px;
+    }
+
+    .btn-completar{
+        background:#3498db;
+    }
+
+    .btn-excluir{
+        background:#e74c3c;
+    }
+
+    .btn-completar:hover{
+        background:#2980b9;
+    }
+
+    .btn-excluir:hover{
+        background:#c0392b;
+    }
+
+    .vazio{
+        color:#888;
+        font-style:italic;
+        padding:10px;
+    }
+
+    small{
+        display:block;
+        margin-top:5px;
+        color:#777;
+    }
+
+    @media(max-width:600px){
+
+        .formulario{
+            flex-direction:column;
+        }
+
+        .card{
+            flex-direction:column;
+            align-items:flex-start;
+            gap:10px;
+        }
+
+        .acoes{
+            width:100%;
+        }
+    }
+</style>
+<h1>📋 Gerenciador de Tarefas</h1>
+
+<div class="dashboard">
+
+    <h2>📊 Estatísticas</h2>
+
+    <p>Total: {{ total }}</p>
+
+    <p>Pendentes: {{ pendentes|length }}</p>
+
+    <p>Concluídas: {{ concluidas|length }}</p>
+
+    <p>Progresso: {{ percentual }}%</p>
+
+    <div class="barra">
+        <div
+            class="progresso"
+            style="width: {{ percentual }}%;">
+        </div>
+    </div>
+
+</div>
+
+<div class="contador">
+    Total de tarefas cadastradas:
+    <strong>{{ total }}</strong>
+</div>
+
+<form action="/adicionar" method="post" class="formulario">
+
+    <input
+        type="text"
+        name="texto_tarefa"
+        placeholder="Digite uma nova tarefa..."
+        required
+    >
+
+    <select name="prioridade" class="prioridade-select">
+        <option value="Baixa">🟢 Baixa</option>
+        <option value="Média">🟡 Média</option>
+        <option value="Alta">🔴 Alta</option>
+    </select>
+
+    <button type="submit" class="btn-adicionar">
+        ➕ Adicionar
+    </button>
+
+</form>
+
+<div class="secao">
+
+    <h2>📌 Pendentes</h2>
+
     {% if pendentes %}
-    <ul>
+
+    <ul class="lista">
+
         {% for tarefa in pendentes %}
-        <li>
-            {{ tarefa['texto'] }}
-            <a href="{{ url_for('completar', id=tarefa['id']) }}">[Completar]</a>
-            <a href="{{ url_for('excluir', id=tarefa['id']) }}">[Excluir]</a>
+
+        <li class="card">
+
+            <div>
+
+                <strong>{{ tarefa["texto"] }}</strong>
+
+                <br>
+
+                Prioridade:
+                {{ tarefa["prioridade"] }}
+
+                <small>
+                    Criada em:
+                    {{ tarefa["data_criacao"] }}
+                </small>
+
+            </div>
+
+            <div class="acoes">
+
+                <a
+                    href="/completar/{{ tarefa['id'] }}"
+                    class="btn btn-completar">
+                    ✓ Completar
+                </a>
+
+                <a
+                    href="/excluir/{{ tarefa['id'] }}"
+                    class="btn btn-excluir">
+                    🗑 Excluir
+                </a>
+
+            </div>
+
         </li>
+
         {% endfor %}
+
     </ul>
+
     {% else %}
-    <p>Nenhuma tarefa pendente.</p>
+
+    <p class="vazio">
+        Nenhuma tarefa pendente.
+    </p>
+
     {% endif %}
 
-    <h2>Concluídas</h2>
+</div>
+
+<div class="secao">
+
+    <h2>✅ Concluídas</h2>
+
     {% if concluidas %}
-    <ul>
+
+    <ul class="lista">
+
         {% for tarefa in concluidas %}
-        <li>
-            <s>{{ tarefa['texto'] }}</s>
-            <a href="{{ url_for('excluir', id=tarefa['id']) }}">[Excluir]</a>
+
+        <li class="card concluida">
+
+            <div>
+
+                <span class="texto-concluido">
+                    {{ tarefa["texto"] }}
+                </span>
+
+                <small>
+                    Criada em:
+                    {{ tarefa["data_criacao"] }}
+                </small>
+
+            </div>
+
+            <div class="acoes">
+
+                <a
+                    href="/excluir/{{ tarefa['id'] }}"
+                    class="btn btn-excluir">
+                    🗑 Excluir
+                </a>
+
+            </div>
+
         </li>
+
         {% endfor %}
+
     </ul>
+
     {% else %}
-    <p>Nenhuma tarefa concluída.</p>
+
+    <p class="vazio">
+        Nenhuma tarefa concluída.
+    </p>
+
     {% endif %}
 
-    <h2>Adicionar nova tarefa</h2>
-    <form action="{{ url_for('adicionar') }}" method="post">
-        <input
-            type="text"
-            name="texto_tarefa"
-            placeholder="Nova tarefa"
-            required
-        >
-        <button type="submit">Adicionar</button>
-    </form>
-</body>
-</html>
+</div>
