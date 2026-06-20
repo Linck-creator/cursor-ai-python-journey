@@ -1,147 +1,227 @@
 # Python Learning Project
 
-A hands-on Python project focused on mastering essential programming concepts and practical development tools. This repository is a collection of beginner-friendly scripts and exercises to guide learners in developing problem-solving skills, file operations, and code quality practices in Python.
+A hands-on Python project focused on mastering essential programming concepts and practical development tools. This repository contains beginner-friendly scripts and exercises designed to develop problem-solving skills, file operations, data analysis, testing, and code quality practices in Python.
 
 ---
 
 ## 📖 Project Overview
 
-This project provides interactive Python scripts and mini projects that cover key topics such as arithmetic processing, control flow, file manipulation, and data analysis. It also introduces common software development workflows including testing, code formatting, and linting.
+This project was developed as part of a Python learning journey using Cursor AI. It includes practical exercises covering arithmetic operations, control flow, file processing, automated testing, code formatting, static analysis, and basic data analysis.
+
+The objective is to build a solid foundation in Python while becoming familiar with modern development tools and workflows.
 
 ---
 
 ## ✨ Features
 
-- Console-based Python scripts with clear, documented code
+- Console-based Python scripts with clear and documented code
 - Basic calculator for arithmetic operations
-- FizzBuzz logic implementation
-- Text file word counter for analysis
-- CSV data analysis: mean, median, standard deviation, and scatter plots
-- Structured examples to practice for loops and conditionals
-- Test suite with **pytest**
-- Automated code formatting with **Black**
-- Code style checking with **Pylint**
+- FizzBuzz implementation
+- Text file word counter using Python collections
+- CSV data analysis with pandas
+- Statistical calculations (mean, median, and standard deviation)
+- Scatter plot generation with matplotlib
+- Examples of loops, conditionals, and exception handling
+- Automated testing with pytest
+- Code formatting with Black
+- Static code analysis with Pylint
+- Git and GitHub integration
 
 ---
 
 ## 🛠 Requirements
 
-- **Python 3.10+**
-- [pytest](https://pytest.org/) (for testing)
-- [black](https://black.readthedocs.io/) (for formatting)
-- [pylint](https://pylint.pycqa.org/) (for linting)
+- Python 3.10+
+- pandas
+- matplotlib
+- pytest
+- black
+- pylint
 
-Install development dependencies with:
+Install all dependencies using:
 
 ```sh
 pip install -r requirements.txt
-```
 
-*Or install tools individually:*
-
-```sh
-pip install pytest black pylint
 ```
 
 ---
 
 ## 🚀 Installation
 
-1. **Clone this repository:**
+1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/Linck-creator/Curso_Santander_Open.git
-   cd Curso_Santander_Open
-   ```
+```sh
+git clone https://github.com/Linck-creator/Curso_Santander_Open.git
+cd Curso_Santander_Open
 
-2. **Ensure Python 3.10 or newer is installed:**
+```
 
-   ```sh
-   python --version
-   ```
+1. Verify your Python installation:
+
+```sh
+python --version
+
+```
+
+1. (Optional) Create and activate a virtual environment:
+
+```sh
+python -m venv venv
+
+```
+
+Windows PowerShell:
+
+```sh
+.\venv\Scripts\Activate.ps1
+
+```
+
+1. Install dependencies:
+
+```sh
+pip install -r requirements.txt
+
+```
 
 ---
 
-## ⚡️ Usage Examples
+## 📦 Distribution
 
-Run scripts from the project directory using your terminal:
+The calculator application can be packaged as a standalone Windows executable using PyInstaller.
 
-### Calculator Script (`calculator.py`)
+### Install PyInstaller
 
-Performs basic arithmetic operations (+, -, *, /).
+```sh
+pip install pyinstaller
+
+```
+
+### Generate the executable
+
+```sh
+pyinstaller --onefile calculator.py
+
+```
+
+### Executable Location
+
+After the build process is completed, the executable will be available at:
+
+```text
+dist/calculator.exe
+
+```
+
+### Benefits
+
+- No Python installation required for end users
+- Single executable file for easy sharing
+- Simplified deployment on Windows systems
+- Convenient testing on different computers
+
+---
+
+## ⚡ Usage Examples
+
+Run the scripts from the project directory.
+
+### Calculator (`calculator.py`)
+
+Performs basic arithmetic operations with input validation and division-by-zero protection.
 
 ```sh
 python calculator.py
-```
-or
-```sh
-python3 calculator.py
+
 ```
 
-### FizzBuzz Script (`fizzbuzz.py`)
+### FizzBuzz (`fizzbuzz.py`)
 
-Prints the FizzBuzz sequence up to a specified number.
+Prints numbers from 1 to 50 following the FizzBuzz rules.
 
 ```sh
 python fizzbuzz.py
-```
-or
-```sh
-python3 fizzbuzz.py
+
 ```
 
-### Word Counter Script (`counter.py`)
+### Word Counter (`counter.py`)
 
-Counts words in a given text file.
+Counts the frequency of words in a text file.
 
 ```sh
-python counter.py sample.txt
+python counter.py
+
 ```
 
-### Data Analysis Script (`parse.py`)
+### Data Analysis (`parse.py`)
 
-Reads a CSV file, calculates mean, median, and standard deviation, and generates a scatter plot using pandas and matplotlib.
+Reads a CSV file, calculates statistical measures, and generates a scatter plot using pandas and matplotlib.
 
 ```sh
-python parse.py data.csv
+python parse.py
+
 ```
 
 ---
 
 ## 🧪 Testing
 
-Run all tests using pytest for script validation:
+Run all automated tests:
 
 ```sh
 pytest
+
 ```
 
 ---
 
 ## 🧹 Code Formatting
 
-Ensure consistent code style by auto-formatting with Black:
+Format the project using Black:
 
 ```sh
 black .
+
 ```
 
 ---
 
 ## 📝 Linting
 
-Check scripts for style and error-prone code using Pylint:
+Analyze code quality using Pylint:
 
 ```sh
 pylint calculator.py fizzbuzz.py counter.py parse.py
+
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+Curso_Santander_Open/
+│
+├── calculator.py
+├── fizzbuzz.py
+├── counter.py
+├── test_counter.py
+├── parse.py
+├── data.csv
+├── requirements.txt
+├── README.md
+├── build/
+└── dist/
+
 ```
 
 ---
 
 ## 👤 Author
 
-Created by Felipe Linck during a Python learning journey with inspiration from the Cursor AI platform.
+Created by **Felipe Linck** during a Python learning journey using Cursor AI, Git, GitHub, and modern development practices.
 
 ---
 
-Happy learning!
+Happy learning and coding! 🚀
