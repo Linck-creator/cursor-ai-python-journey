@@ -7,20 +7,39 @@
 <body>
     <h1>Gerenciador de Tarefas</h1>
 
+    <p>Total de tarefas: {{ total }}</p>
+
+    <h2>Pendentes</h2>
+    {% if pendentes %}
     <ul>
-        {% for tarefa in tarefas %}
+        {% for tarefa in pendentes %}
         <li>
-            {% if tarefa['feito'] %}
-                <s>{{ tarefa['texto'] }}</s>
-            {% else %}
-                {{ tarefa['texto'] }}
-                <a href="/completar/{{ tarefa['id'] }}">[Completar]</a>
-            {% endif %}
+            {{ tarefa['texto'] }}
+            <a href="{{ url_for('completar', id=tarefa['id']) }}">[Completar]</a>
+            <a href="{{ url_for('excluir', id=tarefa['id']) }}">[Excluir]</a>
         </li>
         {% endfor %}
     </ul>
+    {% else %}
+    <p>Nenhuma tarefa pendente.</p>
+    {% endif %}
 
-    <form action="/adicionar" method="post">
+    <h2>Concluídas</h2>
+    {% if concluidas %}
+    <ul>
+        {% for tarefa in concluidas %}
+        <li>
+            <s>{{ tarefa['texto'] }}</s>
+            <a href="{{ url_for('excluir', id=tarefa['id']) }}">[Excluir]</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nenhuma tarefa concluída.</p>
+    {% endif %}
+
+    <h2>Adicionar nova tarefa</h2>
+    <form action="{{ url_for('adicionar') }}" method="post">
         <input
             type="text"
             name="texto_tarefa"
