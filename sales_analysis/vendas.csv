@@ -1,0 +1,16 @@
+data,produto,quantidade,preco
+2025-01-05,Notebook,3,3500
+2025-01-12,Mouse,10,80
+2025-01-20,Teclado,5,150
+2025-02-03,Notebook,2,3500
+2025-02-15,Monitor,4,900
+2025-02-20,Mouse,12,80
+2025-03-01,Teclado,8,150
+2025-03-10,Monitor,5,900
+2025-03-15,Notebook,1,3500
+2025-04-02,Mouse,15,80
+2025-04-18,Monitor,3,900
+2025-04-25,Teclado,7,150
+2025-05-05,Notebook,4,3500
+2025-05-12,Mouse,20,80
+2025-05-22,Monitor,6,900
