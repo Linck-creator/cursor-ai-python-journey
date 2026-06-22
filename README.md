@@ -1,5 +1,13 @@
 🚀 Cursor AI + Python Learning Journey
 
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Development-green?logo=flask)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-purple?logo=pandas)
+![Tkinter](https://img.shields.io/badge/Tkinter-GUI-red)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)
+![Cursor AI](https://img.shields.io/badge/Cursor-AI%20Powered-blueviolet)
+![Santander Open Academy](https://img.shields.io/badge/Santander-Certified-red)
+
 Repository created during the Santander Open Academy course:
 
 Cursor with Python: Intelligent Development with AI
@@ -12,7 +20,7 @@ This repository contains all projects, exercises, and practical applications dev
 
 During this learning journey, I explored how Artificial Intelligence can enhance software development workflows while strengthening core Python programming skills.
 
-Topics covered:
+Topics Covered
 
 - Python Fundamentals
 - AI-Assisted Development with Cursor
@@ -27,21 +35,34 @@ Topics covered:
 
 ---
 
+📂 Repository Structure
+
+Project| Description
+Python Learning Project| Python fundamentals and beginner exercises
+Flask Task Manager| Task management web application
+Sales Analysis| Data analysis and visualization
+File Organizer| File automation and categorization
+Desktop Notepad| Desktop GUI application with Tkinter
+
+---
+
 🛠 Projects
 
 1️⃣ Python Learning Project
 
 Collection of beginner-friendly Python exercises and mini-projects.
 
-Features
+Included Mini Projects
 
-- Basic Calculator
-- FizzBuzz Challenge
-- Word Counter
-- CSV Data Analysis
-- Unit Testing with Pytest
-- Code Formatting with Black
-- Code Quality Analysis with Pylint
+- 🧮 Calculator
+- 🔢 FizzBuzz Challenge
+- 📄 Word Counter
+- 📊 CSV Data Analysis
+- 🔍 Prime Numbers
+- 🤖 Autocomplete Exercise
+- 🧪 Unit Testing with Pytest
+- ✨ Code Formatting with Black
+- 🔎 Code Quality Analysis with Pylint
 
 Technologies
 
@@ -65,7 +86,7 @@ Features
 - Dashboard Statistics
 - Progress Bar
 - Priority Levels
-- Creation Date
+- Creation Date Tracking
 - Dark Mode
 - Responsive Interface
 
@@ -92,6 +113,7 @@ Features
 - Revenue Ranking
 - Business Insights
 - Automated Charts
+- Data Visualization
 
 Technologies
 
@@ -116,6 +138,7 @@ Features
 - Activity Logging
 - Statistics Report
 - Duplicate File Protection
+- Execution Summary
 
 Technologies
 
@@ -125,7 +148,7 @@ Technologies
 
 ---
 
-5️⃣ Notes Editor
+5️⃣ Desktop Notepad
 
 Desktop application built with Tkinter.
 
@@ -138,6 +161,7 @@ Features
 - Scrollbar
 - Dark Mode
 - Desktop GUI
+- User-Friendly Interface
 
 Technologies
 
@@ -148,16 +172,21 @@ Technologies
 
 🧠 Skills Developed
 
+Throughout this course, I strengthened skills in:
+
 - Python Programming
 - Problem Solving
+- Software Development
 - Data Analysis
+- Data Visualization
 - Web Development
 - Desktop Development
 - File Automation
 - Debugging
-- Software Documentation
-- Version Control
+- Documentation
+- Git & GitHub
 - AI-Assisted Development
+- Project Organization
 
 ---
 
@@ -193,6 +222,24 @@ Administration Student | Process Improvement | Python Enthusiast
 
 📍 Brazil
 
+Connect with me
+
+- GitHub: https://github.com/Linck-creator
+- LinkedIn: www.linkedin.com/in/felipe-linck
+
 ---
 
-⭐ Feel free to explore the projects and follow my learning journey.
+⭐ Final Thoughts
+
+This repository represents my learning journey through Python development and AI-assisted programming using Cursor AI.
+
+Each project contributed to developing practical skills in:
+
+- Programming Logic
+- Automation
+- Data Analysis
+- Web Development
+- Desktop Applications
+- Software Engineering Best Practices
+
+Feel free to explore the projects, provide feedback, and follow my learning journey.
