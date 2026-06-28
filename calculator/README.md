@@ -1,227 +1,142 @@
-# Python Learning Project
+# Calculator
 
-A hands-on Python project focused on mastering essential programming concepts and practical development tools. This repository contains beginner-friendly scripts and exercises designed to develop problem-solving skills, file operations, data analysis, testing, and code quality practices in Python.
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
----
+An interactive command-line calculator implemented in Python. Perform basic arithmetic operations with input validation and user-friendly error handling.
 
-## 📖 Project Overview
-
-This project was developed as part of a Python learning journey using Cursor AI. It includes practical exercises covering arithmetic operations, control flow, file processing, automated testing, code formatting, static analysis, and basic data analysis.
-
-The objective is to build a solid foundation in Python while becoming familiar with modern development tools and workflows.
+> **Note:** A standalone Windows executable can be generated using [PyInstaller](https://www.pyinstaller.org/).
 
 ---
 
 ## ✨ Features
 
-- Console-based Python scripts with clear and documented code
-- Basic calculator for arithmetic operations
-- FizzBuzz implementation
-- Text file word counter using Python collections
-- CSV data analysis with pandas
-- Statistical calculations (mean, median, and standard deviation)
-- Scatter plot generation with matplotlib
-- Examples of loops, conditionals, and exception handling
-- Automated testing with pytest
-- Code formatting with Black
-- Static code analysis with Pylint
-- Git and GitHub integration
+- Interactive console interface for arithmetic calculations
+- Supports addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`)
+- Validates numeric input and handles invalid entries gracefully
+- Robust handling of division by zero
+- Informative error messages for invalid operations and input
 
 ---
 
-## 🛠 Requirements
+## 🛠 Technologies Used
 
-- Python 3.10+
-- pandas
-- matplotlib
-- pytest
-- black
-- pylint
-
-Install all dependencies using:
-
-```sh
-pip install -r requirements.txt
-
-```
-
----
-
-## 🚀 Installation
-
-1. Clone the repository:
-
-```sh
-git clone https://github.com/Linck-creator/Curso_Santander_Open.git
-cd Curso_Santander_Open
-
-```
-
-1. Verify your Python installation:
-
-```sh
-python --version
-
-```
-
-1. (Optional) Create and activate a virtual environment:
-
-```sh
-python -m venv venv
-
-```
-
-Windows PowerShell:
-
-```sh
-.\venv\Scripts\Activate.ps1
-
-```
-
-1. Install dependencies:
-
-```sh
-pip install -r requirements.txt
-
-```
-
----
-
-## 📦 Distribution
-
-The calculator application can be packaged as a standalone Windows executable using PyInstaller.
-
-### Install PyInstaller
-
-```sh
-pip install pyinstaller
-
-```
-
-### Generate the executable
-
-```sh
-pyinstaller --onefile calculator.py
-
-```
-
-### Executable Location
-
-After the build process is completed, the executable will be available at:
-
-```text
-dist/calculator.exe
-
-```
-
-### Benefits
-
-- No Python installation required for end users
-- Single executable file for easy sharing
-- Simplified deployment on Windows systems
-- Convenient testing on different computers
-
----
-
-## ⚡ Usage Examples
-
-Run the scripts from the project directory.
-
-### Calculator (`calculator.py`)
-
-Performs basic arithmetic operations with input validation and division-by-zero protection.
-
-```sh
-python calculator.py
-
-```
-
-### FizzBuzz (`fizzbuzz.py`)
-
-Prints numbers from 1 to 50 following the FizzBuzz rules.
-
-```sh
-python fizzbuzz.py
-
-```
-
-### Word Counter (`counter.py`)
-
-Counts the frequency of words in a text file.
-
-```sh
-python counter.py
-
-```
-
-### Data Analysis (`parse.py`)
-
-Reads a CSV file, calculates statistical measures, and generates a scatter plot using pandas and matplotlib.
-
-```sh
-python parse.py
-
-```
-
----
-
-## 🧪 Testing
-
-Run all automated tests:
-
-```sh
-pytest
-
-```
-
----
-
-## 🧹 Code Formatting
-
-Format the project using Black:
-
-```sh
-black .
-
-```
-
----
-
-## 📝 Linting
-
-Analyze code quality using Pylint:
-
-```sh
-pylint calculator.py fizzbuzz.py counter.py parse.py
-
-```
+- Python 3.10+ (standard library)
+- PyInstaller (for packaging executable)
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-Curso_Santander_Open/
+calculator/
 │
-├── calculator.py
-├── fizzbuzz.py
-├── counter.py
-├── test_counter.py
-├── parse.py
-├── data.csv
-├── requirements.txt
-├── README.md
-├── build/
-└── dist/
-
+├── calculator.py        # Main calculator script
+├── calculator.spec      # PyInstaller build specification
+├── README.md            # Project documentation
+├── requirements.txt     # Development dependencies (for optional tasks)
+└── release/
+    └── calculator.exe   # Standalone Windows executable (optional, generated)
 ```
 
 ---
 
-## 👤 Author
+## 🚀 Installation
 
-Created by **Felipe Linck** during a Python learning journey using Cursor AI, Git, GitHub, and modern development practices.
+Clone the repository:
+
+```sh
+git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
+cd cursor-ai-python-journey/calculator
+```
+
+(Optional, recommended) Create and activate a virtual environment:
+
+<details>
+  <summary>Windows (PowerShell)</summary>
+
+  ```sh
+  python -m venv venv
+  .\venv\Scripts\Activate.ps1
+  ```
+</details>
+
+<details>
+  <summary>Unix / macOS</summary>
+
+  ```sh
+  python -m venv venv
+  source venv/bin/activate
+  ```
+</details>
+
+To install development dependencies (if you intend to run tests or maintain the project):
+
+```sh
+pip install -r requirements.txt
+```
+
+> The calculator requires only Python 3.10+ to run. No external libraries are needed for calculator functionality.
 
 ---
 
-Happy learning and coding! 🚀
+## ▶️ Usage
+
+Run the calculator from the `calculator` directory:
+
+```sh
+python calculator.py
+```
+
+**Instructions:**
+- Enter one of `+`, `-`, `*`, or `/` to select an operation.
+- Enter two numbers when prompted.
+- Type `exit` as the operation to quit the program.
+
+**Example session:**
+```
+Enter an operation (+, -, *, /) or 'exit' to quit: *
+Enter the first number: 6
+Enter the second number: 7
+42.0
+
+Enter an operation (+, -, *, /) or 'exit' to quit: /
+Enter the first number: 10
+Enter the second number: 0
+Error: Division by zero is not allowed.
+```
+
+---
+
+## 📸 Preview
+
+> Screenshots will be added in a future update.
+
+---
+
+## 📚 Learning Objectives
+
+This project provides practical experience with:
+
+- Command-line input and output
+- Control flow using loops and conditional statements
+- Exception handling with `try`/`except`
+- Input validation and type conversion (string to float)
+- Structuring a simple Python project
+
+---
+
+## 🔮 Future Improvements
+
+- Implement unit and integration tests for improved reliability
+- Add additional operations (e.g., modulus, exponentiation)
+- Enhance user prompts and error messaging for improved usability
+- Support command-line arguments for scriptable batch calculations
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Felipe Coelho Linck**  
+Administration Student | Python Developer | AI-Assisted Software Development
+
+Created during the **Cursor AI + Python: Intelligent Development with AI** course provided by **Santander Open Academy**.
