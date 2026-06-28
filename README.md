@@ -1,227 +1,245 @@
-# Python Learning Project
+🚀 Cursor AI + Python Learning Journey
 
-A hands-on Python project focused on mastering essential programming concepts and practical development tools. This repository contains beginner-friendly scripts and exercises designed to develop problem-solving skills, file operations, data analysis, testing, and code quality practices in Python.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Development-green?logo=flask)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-purple?logo=pandas)
+![Tkinter](https://img.shields.io/badge/Tkinter-GUI-red)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)
+![Cursor AI](https://img.shields.io/badge/Cursor-AI%20Powered-blueviolet)
+![Santander Open Academy](https://img.shields.io/badge/Santander-Certified-red)
 
----
+Repository created during the Santander Open Academy course:
 
-## 📖 Project Overview
+Cursor with Python: Intelligent Development with AI
 
-This project was developed as part of a Python learning journey using Cursor AI. It includes practical exercises covering arithmetic operations, control flow, file processing, automated testing, code formatting, static analysis, and basic data analysis.
-
-The objective is to build a solid foundation in Python while becoming familiar with modern development tools and workflows.
-
----
-
-## ✨ Features
-
-- Console-based Python scripts with clear and documented code
-- Basic calculator for arithmetic operations
-- FizzBuzz implementation
-- Text file word counter using Python collections
-- CSV data analysis with pandas
-- Statistical calculations (mean, median, and standard deviation)
-- Scatter plot generation with matplotlib
-- Examples of loops, conditionals, and exception handling
-- Automated testing with pytest
-- Code formatting with Black
-- Static code analysis with Pylint
-- Git and GitHub integration
+This repository contains all projects, exercises, and practical applications developed throughout the course, covering Python fundamentals, automation, data analysis, web development, desktop applications, version control, and AI-assisted programming using Cursor AI.
 
 ---
 
-## 🛠 Requirements
+📚 Course Overview
 
-- Python 3.10+
-- pandas
-- matplotlib
-- pytest
-- black
-- pylint
+During this learning journey, I explored how Artificial Intelligence can enhance software development workflows while strengthening core Python programming skills.
 
-Install all dependencies using:
+Topics Covered
 
-```sh
-pip install -r requirements.txt
-
-```
-
----
-
-## 🚀 Installation
-
-1. Clone the repository:
-
-```sh
-git clone https://github.com/Linck-creator/Curso_Santander_Open.git
-cd Curso_Santander_Open
-
-```
-
-1. Verify your Python installation:
-
-```sh
-python --version
-
-```
-
-1. (Optional) Create and activate a virtual environment:
-
-```sh
-python -m venv venv
-
-```
-
-Windows PowerShell:
-
-```sh
-.\venv\Scripts\Activate.ps1
-
-```
-
-1. Install dependencies:
-
-```sh
-pip install -r requirements.txt
-
-```
+- Python Fundamentals
+- AI-Assisted Development with Cursor
+- Code Refactoring and Debugging
+- Documentation and Best Practices
+- Git and GitHub
+- Web Development with Flask
+- Data Analysis with Pandas
+- Data Visualization with Matplotlib
+- Desktop Applications with Tkinter
+- Task Automation with Python
 
 ---
 
-## 📦 Distribution
+📂 Repository Structure
 
-The calculator application can be packaged as a standalone Windows executable using PyInstaller.
-
-### Install PyInstaller
-
-```sh
-pip install pyinstaller
-
-```
-
-### Generate the executable
-
-```sh
-pyinstaller --onefile calculator.py
-
-```
-
-### Executable Location
-
-After the build process is completed, the executable will be available at:
-
-```text
-dist/calculator.exe
-
-```
-
-### Benefits
-
-- No Python installation required for end users
-- Single executable file for easy sharing
-- Simplified deployment on Windows systems
-- Convenient testing on different computers
+Project| Description
+Python Learning Project| Python fundamentals and beginner exercises
+Flask Task Manager| Task management web application
+Sales Analysis| Data analysis and visualization
+File Organizer| File automation and categorization
+Desktop Notepad| Desktop GUI application with Tkinter
 
 ---
 
-## ⚡ Usage Examples
+🛠 Projects
 
-Run the scripts from the project directory.
+1️⃣ Python Learning Project
 
-### Calculator (`calculator.py`)
+Collection of beginner-friendly Python exercises and mini-projects.
 
-Performs basic arithmetic operations with input validation and division-by-zero protection.
+Included Mini Projects
 
-```sh
-python calculator.py
+- 🧮 Calculator
+- 🔢 FizzBuzz Challenge
+- 📄 Word Counter
+- 📊 CSV Data Analysis
+- 🔍 Prime Numbers
+- 🤖 Autocomplete Exercise
+- 🧪 Unit Testing with Pytest
+- ✨ Code Formatting with Black
+- 🔎 Code Quality Analysis with Pylint
 
-```
+Technologies
 
-### FizzBuzz (`fizzbuzz.py`)
-
-Prints numbers from 1 to 50 following the FizzBuzz rules.
-
-```sh
-python fizzbuzz.py
-
-```
-
-### Word Counter (`counter.py`)
-
-Counts the frequency of words in a text file.
-
-```sh
-python counter.py
-
-```
-
-### Data Analysis (`parse.py`)
-
-Reads a CSV file, calculates statistical measures, and generates a scatter plot using pandas and matplotlib.
-
-```sh
-python parse.py
-
-```
+- Python
+- Pytest
+- Black
+- Pylint
 
 ---
 
-## 🧪 Testing
+2️⃣ Flask Task Manager
 
-Run all automated tests:
+Web application developed with Flask for personal task management.
 
-```sh
-pytest
+Features
 
-```
+- Create Tasks
+- Complete Tasks
+- Delete Tasks
+- JSON Persistence
+- Dashboard Statistics
+- Progress Bar
+- Priority Levels
+- Creation Date Tracking
+- Dark Mode
+- Responsive Interface
 
----
+Technologies
 
-## 🧹 Code Formatting
-
-Format the project using Black:
-
-```sh
-black .
-
-```
-
----
-
-## 📝 Linting
-
-Analyze code quality using Pylint:
-
-```sh
-pylint calculator.py fizzbuzz.py counter.py parse.py
-
-```
+- Python
+- Flask
+- HTML
+- CSS
+- Jinja2
+- JSON
 
 ---
 
-## 📂 Project Structure
+3️⃣ Sales Analysis
 
-```text
-Curso_Santander_Open/
-│
-├── calculator.py
-├── fizzbuzz.py
-├── counter.py
-├── test_counter.py
-├── parse.py
-├── data.csv
-├── requirements.txt
-├── README.md
-├── build/
-└── dist/
+Data analysis project using Pandas and Matplotlib.
 
-```
+Features
 
----
+- Monthly Sales Analysis
+- Revenue Calculation
+- Best-Selling Products
+- Revenue Ranking
+- Business Insights
+- Automated Charts
+- Data Visualization
 
-## 👤 Author
+Technologies
 
-Created by **Felipe Linck** during a Python learning journey using Cursor AI, Git, GitHub, and modern development practices.
+- Python
+- Pandas
+- Matplotlib
 
 ---
 
-Happy learning and coding! 🚀
+4️⃣ File Organizer
+
+Automation script that organizes files based on their extensions.
+
+Features
+
+- Automatic Categorization
+- Images
+- Documents
+- Videos
+- Music
+- Compressed Files
+- Activity Logging
+- Statistics Report
+- Duplicate File Protection
+- Execution Summary
+
+Technologies
+
+- Python
+- Pathlib
+- Shutil
+
+---
+
+5️⃣ Desktop Notepad
+
+Desktop application built with Tkinter.
+
+Features
+
+- Create Notes
+- Open Files
+- Save Files
+- Toolbar
+- Scrollbar
+- Dark Mode
+- Desktop GUI
+- User-Friendly Interface
+
+Technologies
+
+- Python
+- Tkinter
+
+---
+
+🧠 Skills Developed
+
+Throughout this course, I strengthened skills in:
+
+- Python Programming
+- Problem Solving
+- Software Development
+- Data Analysis
+- Data Visualization
+- Web Development
+- Desktop Development
+- File Automation
+- Debugging
+- Documentation
+- Git & GitHub
+- AI-Assisted Development
+- Project Organization
+
+---
+
+⚙️ Technologies Used
+
+- Python
+- Flask
+- Pandas
+- Matplotlib
+- Tkinter
+- Pathlib
+- Git
+- GitHub
+- Cursor AI
+
+---
+
+🏆 Course Certificate
+
+Cursor with Python: Intelligent Development with AI
+
+- Provider: Santander Open Academy
+- Completion Date: June 2026
+- Duration: 8 Hours
+
+---
+
+👨‍💻 Author
+
+Felipe Coelho Linck
+
+Administration Student | Process Improvement | Python Enthusiast
+
+📍 Brazil
+
+Connect with me
+
+- GitHub: https://github.com/Linck-creator
+- LinkedIn: www.linkedin.com/in/felipe-linck
+
+---
+
+⭐ Final Thoughts
+
+This repository represents my learning journey through Python development and AI-assisted programming using Cursor AI.
+
+Each project contributed to developing practical skills in:
+
+- Programming Logic
+- Automation
+- Data Analysis
+- Web Development
+- Desktop Applications
+- Software Engineering Best Practices
+
+Feel free to explore the projects, provide feedback, and follow my learning journey.
