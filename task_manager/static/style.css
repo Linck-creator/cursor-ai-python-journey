@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    width: 70%;
+}
+
+button {
+    padding: 8px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.tema-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+.dark-mode .container{
+    background:#1e1e1e;
+}
+
+.dark-mode .card{
+    background:#2d2d2d;
+}
+
+.dark-mode .card .texto-concluido{
+    color:#777;
+}
+
+.dark-mode .card .btn-completar{
+    background:#2d2d2d;
+}
+
+.dark-mode .card .btn-excluir{
+    background:#2d2d2d;
+}
+
+.dark-mode .card .btn-excluir:hover{
+    background:#2d2d2d;
+}
+
+.dark-mode .card .btn-completar:hover{
+    background:#2d2d2d;
+}
+
+.dark-mode .card .btn-excluir:hover{
+    background:#2d2d2d;
+}
+
+.dark-mode .card .btn-completar:hover{
+    background:#2d2d2d;
+}

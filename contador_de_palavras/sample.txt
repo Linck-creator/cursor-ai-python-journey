@@ -1,4 +1,0 @@
-Python is amazing.
-Python is easy to learn.
-Learning Python is fun.
-Python helps developers solve problems.
