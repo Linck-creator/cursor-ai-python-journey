@@ -2,26 +2,26 @@
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
-An interactive command-line calculator implemented in Python. Perform basic arithmetic operations with input validation and user-friendly error handling.
+A professional command-line calculator built with Python. This tool performs basic arithmetic operations with robust input validation and error handling. Designed for clarity and reliability, it offers a clear user experience and can be distributed as a standalone Windows executable.
 
-> **Note:** A standalone Windows executable can be generated using [PyInstaller](https://www.pyinstaller.org/).
+> **Note:** You can package this calculator as a Windows executable using [PyInstaller](https://www.pyinstaller.org/).
 
 ---
 
 ## ✨ Features
 
-- Interactive console interface for arithmetic calculations
+- Command-line interface for arithmetic calculations
 - Supports addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`)
 - Validates numeric input and handles invalid entries gracefully
 - Robust handling of division by zero
-- Informative error messages for invalid operations and input
+- Displays informative error messages for invalid operations and input
 
 ---
 
 ## 🛠 Technologies Used
 
 - Python 3.10+ (standard library)
-- PyInstaller (for packaging executable)
+- PyInstaller (for optional executable packaging)
 
 ---
 
@@ -35,7 +35,7 @@ calculator/
 ├── README.md            # Project documentation
 ├── requirements.txt     # Development dependencies (for optional tasks)
 └── release/
-    └── calculator.exe   # Standalone Windows executable (optional, generated)
+    └── calculator.exe   # Standalone Windows executable (generated, optional)
 ```
 
 ---
@@ -49,7 +49,7 @@ git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
 cd cursor-ai-python-journey/calculator
 ```
 
-(Optional, recommended) Create and activate a virtual environment:
+(Optional) Create and activate a virtual environment:
 
 <details>
   <summary>Windows (PowerShell)</summary>
@@ -69,25 +69,26 @@ cd cursor-ai-python-journey/calculator
   ```
 </details>
 
-To install development dependencies (if you intend to run tests or maintain the project):
+To install development dependencies (for packaging tasks):
 
 ```sh
 pip install -r requirements.txt
 ```
 
-> The calculator requires only Python 3.10+ to run. No external libraries are needed for calculator functionality.
+> The calculator requires only Python 3.10+ to run. No external libraries are needed.
 
 ---
 
 ## ▶️ Usage
 
-Run the calculator from the `calculator` directory:
+To run the calculator:
 
 ```sh
 python calculator.py
 ```
 
 **Instructions:**
+
 - Enter one of `+`, `-`, `*`, or `/` to select an operation.
 - Enter two numbers when prompted.
 - Type `exit` as the operation to quit the program.
@@ -115,22 +116,22 @@ Error: Division by zero is not allowed.
 
 ## 📚 Learning Objectives
 
-This project provides practical experience with:
+This project provides hands-on experience with:
 
 - Command-line input and output
-- Control flow using loops and conditional statements
+- Control flow using loops and conditionals
 - Exception handling with `try`/`except`
 - Input validation and type conversion (string to float)
-- Structuring a simple Python project
+- Structuring a simple Python script
 
 ---
 
 ## 🔮 Future Improvements
 
-- Implement unit and integration tests for improved reliability
-- Add additional operations (e.g., modulus, exponentiation)
-- Enhance user prompts and error messaging for improved usability
-- Support command-line arguments for scriptable batch calculations
+- Add unit and integration tests to ensure reliability
+- Implement additional operations (e.g., modulus, exponentiation)
+- Refine user prompts and error messages for enhanced usability
+- Support command-line arguments for non-interactive (batch) calculations
 
 ---
 
