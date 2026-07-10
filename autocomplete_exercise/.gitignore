@@ -1,0 +1,13 @@
+# Python Cache
+__pycache__/
+
+# Compiled Python Files
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# Operating System
+.DS_Store
+Thumbs.db
