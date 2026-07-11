@@ -1,25 +1,146 @@
-# Sales Analysis Project
+# Sales Analysis
 
-Projeto desenvolvido em Python utilizando Pandas e Matplotlib para análise de vendas mensais.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 
-## Resultados Obtidos
+A professional Python project for analyzing sales data from a CSV dataset using Pandas. Calculates business metrics and generates charts with Matplotlib to support data-driven decision-making.
 
-- Produto mais vendido: Mouse
-- Produto com maior receita: Notebook
-- Mês com maior faturamento: Maio de 2025
+---
 
-## Análise
+## ✨ Features
 
-Os dados demonstram que o produto Notebook foi responsável pela maior receita da empresa, enquanto o Mouse apresentou o maior volume de vendas. Observa-se também um crescimento significativo no faturamento durante o mês de maio, indicando um possível aumento da demanda ou realização de campanhas promocionais.
+- Load sales data from a CSV file
+- Parse date columns automatically
+- Calculate revenue for each sale
+- Aggregate sales by month
+- Aggregate sales by product
+- Identify the best-selling product
+- Identify the product with the highest revenue
+- Generate monthly sales charts
+- Generate Top 5 products by revenue charts
+- Save generated charts as PNG images
 
-A utilização do Pandas permitiu consolidar os dados de vendas e gerar indicadores relevantes para apoio à tomada de decisão, enquanto o Matplotlib possibilitou a visualização gráfica dos resultados obtidos.
+---
 
-## Gráficos
+## 🛠 Technologies Used
 
-### Vendas por mês
+- Python 3.10+
+- Pandas
+- Matplotlib
 
-![Vendas por mês](vendas_por_mes.png)
+---
 
-### Top produtos por receita
+## 📂 Project Structure
 
-![Top produtos](top5_produtos.png)
+```text
+sales_analysis/
+│
+├── parse.py             # Main analysis script
+├── vendas.csv           # Sample sales dataset
+├── venda_por_mes.png    # Generated monthly sales chart
+├── top5_produtos.png    # Generated Top 5 products chart
+├── README.md            # Project documentation
+├── requirements.txt     # Project dependencies
+└── .gitignore           # Git ignore rules
+```
+
+---
+
+## 🚀 Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
+cd cursor-ai-python-journey/sales_analysis
+```
+
+2. (Optional) Create and activate a virtual environment.
+
+<details>
+  <summary>Windows (PowerShell)</summary>
+
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+</details>
+
+<details>
+  <summary>Unix / macOS</summary>
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+</details>
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+> This project requires **Pandas** and **Matplotlib**. Install the dependencies using the provided `requirements.txt` file before running the script.
+
+---
+
+## ▶️ Usage
+
+To analyze sales data and generate business insights and charts:
+
+```bash
+python parse.py
+```
+
+The script will:
+
+- Load the CSV dataset
+- Perform sales data analysis
+- Print business insights to the console
+- Generate two charts (monthly sales and top 5 products by revenue)
+- Save both charts as PNG images
+
+---
+
+## 📸 Preview
+
+> Screenshots will be added in a future update.
+
+---
+
+## 📚 Learning Objectives
+
+- Data analysis with Pandas
+- Working with DataFrames
+- Reading CSV files
+- Data aggregation
+- Business metrics
+- Data visualization
+- Matplotlib
+- GroupBy operations
+- Business data analysis
+
+---
+
+## 🔮 Future Improvements
+
+- Interactive charts
+- Dashboard generation
+- Export reports to Excel
+- Command-line arguments
+- Additional business KPIs
+- Data filtering options
+- Support larger datasets
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Felipe Coelho Linck**
+
+Administration Student | Python Developer | AI-Assisted Software Development
+
+Created during the **Cursor AI + Python: Intelligent Development with AI** course provided by **Santander Open Academy**.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
