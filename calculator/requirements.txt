@@ -1,4 +1,2 @@
-# No external dependencies are required for the calculator project.
-# All functionality is provided by the Python standard library.
-# PyInstaller is only needed if you wish to package the script as an executable:
-# pyinstaller
+
+# No external dependencies required.
