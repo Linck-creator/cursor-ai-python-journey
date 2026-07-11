@@ -44,17 +44,21 @@ def main():
 
         # Process the selected arithmetic operation
         if operation == "+":
-            print(num1 + num2)
+            result = num1 + num2
+            print(f"Result: {result}")
         elif operation == "-":
-            print(num1 - num2)
+            result = num1 - num2
+            print(f"Result: {result}")
         elif operation == "*":
-            print(num1 * num2)
+            result = num1 * num2
+            print(f"Result: {result}")
         elif operation == "/":
             # Handle division by zero
             if num2 == 0:
                 print("Error: Division by zero is not allowed.")
             else:
-                print(num1 / num2)
+                result = num1 / num2
+                print(f"Result: {result}")
         else:
             # Handle invalid operation input
             print("Error: Invalid operation. Please enter one of +, -, *, /.")

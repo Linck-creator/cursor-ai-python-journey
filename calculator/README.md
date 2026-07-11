@@ -1,27 +1,28 @@
 # Calculator
 
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 
-A professional command-line calculator built with Python. This tool performs basic arithmetic operations with robust input validation and error handling. Designed for clarity and reliability, it offers a clear user experience and can be distributed as a standalone Windows executable.
-
-> **Note:** You can package this calculator as a Windows executable using [PyInstaller](https://www.pyinstaller.org/).
+A command-line calculator built with Python that performs basic arithmetic operations with input validation and error handling.
 
 ---
 
 ## ✨ Features
 
-- Command-line interface for arithmetic calculations
-- Supports addition (`+`), subtraction (`-`), multiplication (`*`), and division (`/`)
-- Validates numeric input and handles invalid entries gracefully
-- Robust handling of division by zero
-- Displays informative error messages for invalid operations and input
+- Perform addition
+- Perform subtraction
+- Perform multiplication
+- Perform division
+- Continuous interactive operation loop
+- Input validation
+- Division by zero handling
+- Clear error messages
 
 ---
 
 ## 🛠 Technologies Used
 
-- Python 3.10+ (standard library)
-- PyInstaller (for optional executable packaging)
+- Python 3.10+
+- Python Standard Library
 
 ---
 
@@ -30,81 +31,70 @@ A professional command-line calculator built with Python. This tool performs bas
 ```text
 calculator/
 │
-├── calculator.py        # Main calculator script
-├── calculator.spec      # PyInstaller build specification
-├── README.md            # Project documentation
-├── requirements.txt     # Development dependencies (for optional tasks)
+├── calculator.py
+├── calculator.spec
+├── README.md
+├── requirements.txt
+├── .gitignore
 └── release/
-    └── calculator.exe   # Standalone Windows executable (generated, optional)
 ```
 
 ---
 
 ## 🚀 Installation
 
-Clone the repository:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
+   ```
+2. **Change to the project directory**
+   ```bash
+   cd cursor-ai-python-journey/calculator
+   ```
+3. **(Optional) Create and activate a virtual environment**
 
-```sh
-git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
-cd cursor-ai-python-journey/calculator
-```
+   <details>
+   <summary><b>Windows (PowerShell)</b></summary>
 
-(Optional) Create and activate a virtual environment:
+   ```powershell
+   python -m venv venv
+   .\venv\Scripts\Activate.ps1
+   ```
 
-<details>
-  <summary>Windows (PowerShell)</summary>
+   </details>
 
-  ```sh
-  python -m venv venv
-  .\venv\Scripts\Activate.ps1
-  ```
-</details>
+   <details>
+   <summary><b>Unix / macOS</b></summary>
 
-<details>
-  <summary>Unix / macOS</summary>
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   ```
 
-  ```sh
-  python -m venv venv
-  source venv/bin/activate
-  ```
-</details>
+   </details>
 
-To install development dependencies (for packaging tasks):
-
-```sh
-pip install -r requirements.txt
-```
-
-> The calculator requires only Python 3.10+ to run. No external libraries are needed.
+4. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+   > This project uses only the Python Standard Library. No external packages are required at runtime.
 
 ---
 
 ## ▶️ Usage
 
-To run the calculator:
+Execute the script using:
 
-```sh
+```bash
 python calculator.py
 ```
 
-**Instructions:**
-
-- Enter one of `+`, `-`, `*`, or `/` to select an operation.
-- Enter two numbers when prompted.
-- Type `exit` as the operation to quit the program.
-
-**Example session:**
-```
-Enter an operation (+, -, *, /) or 'exit' to quit: *
-Enter the first number: 6
-Enter the second number: 7
-42.0
-
-Enter an operation (+, -, *, /) or 'exit' to quit: /
-Enter the first number: 10
-Enter the second number: 0
-Error: Division by zero is not allowed.
-```
+The calculator will:
+- Prompt for an arithmetic operation (`+`, `-`, `*`, `/`) or allow `exit` to quit
+- Request two numeric values
+- Perform the calculation
+- Validate input and display clear error messages for invalid input or division by zero
+- Continue operation until the user types `exit`
 
 ---
 
@@ -116,22 +106,25 @@ Error: Division by zero is not allowed.
 
 ## 📚 Learning Objectives
 
-This project provides hands-on experience with:
-
-- Command-line input and output
-- Control flow using loops and conditionals
-- Exception handling with `try`/`except`
-- Input validation and type conversion (string to float)
-- Structuring a simple Python script
+- Functions
+- User input
+- Conditional statements
+- Loops
+- Exception handling
+- Input validation
+- Arithmetic operations
+- Command-line applications
 
 ---
 
 ## 🔮 Future Improvements
 
-- Add unit and integration tests to ensure reliability
-- Implement additional operations (e.g., modulus, exponentiation)
-- Refine user prompts and error messages for enhanced usability
-- Support command-line arguments for non-interactive (batch) calculations
+- Additional mathematical operations
+- Calculation history
+- Expression evaluation
+- Unit tests
+- Graphical user interface (GUI)
+- Command-line arguments
 
 ---
 
