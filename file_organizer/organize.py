@@ -1,24 +1,27 @@
 """
 File Organizer
 
-This script automatically organizes files in a specified folder ("test") by sorting them
-into subfolders based on their file extensions/categories (Images, Documents, etc.).
-It uses only standard Python libraries, and all logic uses pathlib where possible.
+This script automatically organizes files in the specified folder ("test") by sorting them
+into subfolders based on their file extensions (e.g., Images, Documents, Music, etc.).
+It uses only Python standard libraries and leverages pathlib for all file and folder manipulation.
 
-Each file processed is logged with a timestamp, user-friendly terminal output is displayed,
-and a sorted, percentage-based summary including operation duration is printed at the end.
+Features:
+- Each processed file is logged with a UTC timestamp.
+- User-friendly console output and a log file showing actions and status.
+- At completion, prints a sorted summary with breakdown by file category, percentage, and elapsed duration.
 
 Author: Felipe Linck
+
+Developed during the "Cursor AI + Python: Intelligent Development with AI" course (Santander Open Academy).
 """
 
 from pathlib import Path
 import shutil
-from typing import Dict, TextIO
+from typing import Dict, TextIO, Optional
 from datetime import datetime
 import time
 
-# ----------------------- CONFIGURATION SECTION -----------------------
-# Mapping of file extensions to categories
+# ---------------------------- CONFIGURATION -----------------------------
 CATEGORIES: Dict[str, list[str]] = {
     "Compressed": [".zip", ".rar", ".7z"],
     "Documents": [".pdf", ".docx", ".txt", ".xlsx", ".pptx"],
@@ -26,57 +29,58 @@ CATEGORIES: Dict[str, list[str]] = {
     "Music": [".mp3", ".wav"],
     "Videos": [".mp4", ".avi", ".mkv"],
 }
-FOLDER_NAME: str = "test"  # Folder to organize
-LOG_FILE: str = "organization.log"
 
-# ----------------------- UTILITY FUNCTIONS -----------------------
+FOLDER_NAME: str = "test"             # Folder to organize
+LOG_FILE: str = "organization.log"    # Log filename (created inside the target folder)
+
+# ---------------------------- UTILITY FUNCTIONS -------------------------
 
 def get_category(extension: str) -> str:
-    """Return the file category for a given extension.
+    """
+    Determine the file category for a given extension.
 
     Args:
-        extension (str): The file extension.
+        extension (str): The file extension (e.g., ".txt").
 
     Returns:
-        str: The category name, or 'Others' if not found.
+        str: The corresponding category, or "Others" if not found.
     """
     for category, extensions in CATEGORIES.items():
         if extension.lower() in extensions:
             return category
     return "Others"
 
-def create_folder_if_not_exists(base_path: Path, folder_name: str) -> Path:
-    """Ensure a subfolder exists inside the base path.
 
-    If not, it is created.
+def create_folder_if_not_exists(base_path: Path, folder_name: str) -> Path:
+    """
+    Ensure a subfolder exists within the base directory. Creates the subfolder if needed.
 
     Args:
-        base_path (Path): Parent directory.
+        base_path (Path): The parent directory.
         folder_name (str): Name of the category subfolder.
 
     Returns:
-        Path: The Path to the (created or existing) subfolder.
+        Path: Path to the category subfolder.
     """
     folder_path = base_path / folder_name
     if not folder_path.exists():
         try:
-            folder_path.mkdir(
-                parents=True,
-                exist_ok=True
-            )
+            folder_path.mkdir(parents=True, exist_ok=True)
         except Exception as e:
-            print(f"Error creating folder {folder_name}: {e}")
+            print(f"Error creating folder '{folder_name}': {e}")
     return folder_path
 
+
 def generate_unique_filename(destination_folder: Path, filename: str) -> Path:
-    """Produce a unique filename in the folder so files do not overwrite.
+    """
+    Generate a unique filename within the destination to prevent overwriting.
 
     Args:
-        destination_folder (Path): The target directory.
+        destination_folder (Path): Destination directory.
         filename (str): The original filename.
 
     Returns:
-        Path: Path suitable for saving without collision.
+        Path: Path with a unique filename.
     """
     destination = destination_folder / filename
     if not destination.exists():
@@ -93,24 +97,29 @@ def generate_unique_filename(destination_folder: Path, filename: str) -> Path:
         counter += 1
     return destination
 
-def move_file(file_path: Path, destination_folder: Path, log_handle: TextIO) -> str | None:
-    """Move file to destination folder, uniquely renaming if necessary.
 
-    Logs all activity with a UTC timestamp.
+def move_file(
+    file_path: Path,
+    destination_folder: Path,
+    log_handle: TextIO
+) -> Optional[str]:
+    """
+    Move a file to the destination folder, using a unique filename if necessary.
+    Log the action with a UTC timestamp.
 
     Args:
         file_path (Path): Source file.
-        destination_folder (Path): Folder to move file to.
-        log_handle (TextIO): Handle to open log file.
+        destination_folder (Path): Destination folder.
+        log_handle (TextIO): Writable log file handle.
 
     Returns:
-        Optional[str]: The category, or None if an error occurred.
+        Optional[str]: Category if the move succeeded, otherwise None.
     """
     try:
         unique_dest = generate_unique_filename(destination_folder, file_path.name)
         shutil.move(str(file_path), str(unique_dest))
         category = destination_folder.name
-        time_str = datetime.now() .astimezone() .strftime("%Y-%m-%d %H:%M:%S UTC")
+        time_str = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S UTC")
         msg = f"Moved: {file_path.name} -> {category}"
         print(msg)
         log_handle.write(f"[{time_str}] {msg}\n")
@@ -122,34 +131,31 @@ def move_file(file_path: Path, destination_folder: Path, log_handle: TextIO) -> 
         log_handle.write(f"[{time_str}] {msg}\n")
         return None
 
-def generate_report(
-    total_files: int,
-    category_counts: Dict[str, int],
-    duration_seconds: float
-) -> None:
-    """Print a sorted summary of organization results with percentages and duration.
+
+def generate_report(total_files: int, category_counts: Dict[str, int], duration_seconds: float) -> None:
+    """
+    Print a summary of the organization, sorted by category, including count and percentage.
 
     Args:
         total_files (int): Total files processed.
-        category_counts (Dict[str, int]): Mapping of category -> count.
-        duration_seconds (float): Time spent processing, in seconds.
+        category_counts (Dict[str, int]): Mapping of category -> number of files.
+        duration_seconds (float): Total elapsed time, in seconds.
     """
     print("\n--- Organization Summary ---")
     print(f"Total files processed: {total_files}")
-    print(f"Time taken: {duration_seconds:.2f} seconds")
-    print()
+    print(f"Time taken: {duration_seconds:.2f} seconds\n")
     print("Category Breakdown:")
-    sorted_cats = sorted(category_counts.keys())
-    for category in sorted_cats:
+    for category in sorted(category_counts.keys()):
         count = category_counts[category]
         percent = (count / total_files * 100) if total_files > 0 else 0.0
         print(f"  {category:12}: {count} file(s)  ({percent:.1f}%)")
     print("---------------------------")
 
-# ----------------------- MAIN ORGANIZER FUNCTION -----------------------
+# ---------------------- MAIN ORGANIZER FUNCTION ------------------------
 
 def organize_folder(folder_name: str) -> None:
-    """Organize the files in a folder by category, with logging and summary.
+    """
+    Organize files in the specified folder by category with logging and a summary report.
 
     Args:
         folder_name (str): The folder to process.
@@ -159,7 +165,6 @@ def organize_folder(folder_name: str) -> None:
         print(f"Folder '{folder_name}' does not exist or is not a directory.")
         return
 
-    # Prepare logging
     log_file_path = base_path / LOG_FILE
     try:
         log_handle = open(log_file_path, "a", encoding="utf-8")
@@ -173,14 +178,14 @@ def organize_folder(folder_name: str) -> None:
 
     start_time = time.perf_counter()
 
-    # File counters
     total_files = 0
-    category_counts: Dict[str, int] = {}
-    for category in list(CATEGORIES.keys()) + ["Others"]:
-        category_counts[category] = 0
+    category_counts: Dict[str, int] = {key: 0 for key in list(CATEGORIES.keys()) + ["Others"]}
 
-    # Iterate files (ignore directories)
-    files = [f for f in base_path.iterdir() if f.is_file() and f.name != LOG_FILE]
+    # Only process files, skip subfolders and the log itself
+    files = [
+        f for f in base_path.iterdir()
+        if f.is_file() and f.name != LOG_FILE
+    ]
     for file_path in files:
         extension = file_path.suffix.lower()
         category = get_category(extension)
@@ -192,13 +197,14 @@ def organize_folder(folder_name: str) -> None:
 
     duration_seconds = time.perf_counter() - start_time
 
-    # Reporting and cleanup
+    # Reporting and log finalization
     generate_report(total_files, category_counts, duration_seconds)
-    log_handle.write(f"=== Organization finished. {total_files} files processed in {duration_seconds:.2f} seconds ===\n\n")
+    log_handle.write(
+        f"=== Organization finished. {total_files} files processed in {duration_seconds:.2f} seconds ===\n\n"
+    )
     log_handle.close()
 
-
-# ----------------------- EXECUTION ENTRY POINT -----------------------
+# ------------------------- PROGRAM ENTRY POINT -------------------------
 
 if __name__ == "__main__":
     print("Starting File Organizer...\n")
