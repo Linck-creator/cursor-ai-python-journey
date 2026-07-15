@@ -1,4 +1,4 @@
-🚀 Cursor AI + Python Learning Journey
+# 🚀 Cursor AI + Python Journey
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Web%20Development-green?logo=flask)
@@ -8,195 +8,91 @@
 ![Cursor AI](https://img.shields.io/badge/Cursor-AI%20Powered-blueviolet)
 ![Santander Open Academy](https://img.shields.io/badge/Santander-Certified-red)
 
-Repository created during the Santander Open Academy course:
+---
 
-Cursor with Python: Intelligent Development with AI
-
-This repository contains all projects, exercises, and practical applications developed throughout the course, covering Python fundamentals, automation, data analysis, web development, desktop applications, version control, and AI-assisted programming using Cursor AI.
+This repository documents the development of practical Python projects built while learning AI-assisted software development with Cursor AI. It functions as a software engineering portfolio, showcasing fundamentals, automation, data analysis, web development, and desktop application development through ten self-contained projects.
 
 ---
 
-📚 Course Overview
+## 📚 About this Repository
 
-During this learning journey, I explored how Artificial Intelligence can enhance software development workflows while strengthening core Python programming skills.
+This repository consolidates a set of independent Python projects, each built to practice a specific area of software development:
 
-Topics Covered
-
-- Python Fundamentals
-- AI-Assisted Development with Cursor
-- Code Refactoring and Debugging
-- Documentation and Best Practices
-- Git and GitHub
-- Web Development with Flask
-- Data Analysis with Pandas
-- Data Visualization with Matplotlib
-- Desktop Applications with Tkinter
-- Task Automation with Python
+- **Learning journey** — progressive exercises covering Python fundamentals through applied projects in web, desktop, and data domains.
+- **Software engineering practices** — every project is organized in its own folder with a dedicated README, a scoped `requirements.txt`, and a `.gitignore`.
+- **AI-assisted development** — every project was built and documented using Cursor AI, with the workflow itself recorded in [`Cursor_AI_Portfolio_Workflow.md`](./Cursor_AI_Portfolio_Workflow.md).
+- **Documentation standard** — all project READMEs follow the same structure, described in detail below.
 
 ---
 
-📂 Repository Structure
+## 📂 Repository Structure
 
-Project| Description
-Python Learning Project| Python fundamentals and beginner exercises
-Flask Task Manager| Task management web application
-Sales Analysis| Data analysis and visualization
-File Organizer| File automation and categorization
-Desktop Notepad| Desktop GUI application with Tkinter
-
----
-
-🛠 Projects
-
-1️⃣ Python Learning Project
-
-Collection of beginner-friendly Python exercises and mini-projects.
-
-Included Mini Projects
-
-- 🧮 Calculator
-- 🔢 FizzBuzz Challenge
-- 📄 Word Counter
-- 📊 CSV Data Analysis
-- 🔍 Prime Numbers
-- 🤖 Autocomplete Exercise
-- 🧪 Unit Testing with Pytest
-- ✨ Code Formatting with Black
-- 🔎 Code Quality Analysis with Pylint
-
-Technologies
-
-- Python
-- Pytest
-- Black
-- Pylint
+| Project | Description |
+|---|---|
+| [calculator](./calculator) | Command-line calculator with input validation, error handling, and a packaged Windows executable. |
+| [fizzbuzz](./fizzbuzz) | Classic FizzBuzz challenge demonstrating conditional logic and iteration. |
+| [word_counter](./word_counter) | CLI tool that counts words in a text file and reports the most frequent terms. |
+| [prime_numbers](./prime_numbers) | Optimized prime number verification using integer square root. |
+| [autocomplete_exercise](./autocomplete_exercise) | Collection of introductory exercises using list comprehensions and basic algorithms. |
+| [data_analysis_basics](./data_analysis_basics) | Exploratory data analysis of a CSV dataset with descriptive statistics and a scatter plot. |
+| [sales_analysis](./sales_analysis) | Sales data analysis with monthly and per-product aggregation, plus generated charts. |
+| [desktop_notepad](./desktop_notepad) | Desktop notes editor built with Tkinter, featuring light/dark mode. |
+| [file_organizer](./file_organizer) | Automation script that organizes files into folders by extension, with logging. |
+| [task_manager](./task_manager) | Flask web application for task management with JSON persistence and a dashboard. |
 
 ---
 
-2️⃣ Flask Task Manager
+## 🛠 Featured Projects
 
-Web application developed with Flask for personal task management.
+**Calculator** — Interactive command-line calculator with the four basic operations, input validation, and division-by-zero handling; packaged as a standalone `.exe` with PyInstaller.
 
-Features
+**FizzBuzz** — A clean implementation of the classic FizzBuzz problem, demonstrating control flow fundamentals.
 
-- Create Tasks
-- Complete Tasks
-- Delete Tasks
-- JSON Persistence
-- Dashboard Statistics
-- Progress Bar
-- Priority Levels
-- Creation Date Tracking
-- Dark Mode
-- Responsive Interface
+**Word Counter** — Reads a text file, counts total words, and reports the ten most frequent terms using `collections.Counter` and regular expressions.
 
-Technologies
+**Prime Numbers** — Demonstrates an optimized primality test using `math.isqrt()` to limit trial division to divisors up to the square root.
 
-- Python
-- Flask
-- HTML
-- CSS
-- Jinja2
-- JSON
+**Autocomplete Exercise** — A set of introductory exercises applying list comprehensions to squares, filtering, and prime-number sums.
+
+**Data Analysis Basics** — Loads a CSV dataset with Pandas, computes descriptive statistics, and visualizes the relationship between two variables with Matplotlib.
+
+**Sales Analysis** — Aggregates sales data by month and by product, identifies top performers, and generates saved chart images for reporting.
+
+**Desktop Notepad** — An object-oriented Tkinter application supporting file operations, a toolbar, and a light/dark theme toggle.
+
+**File Organizer** — Automatically sorts files into category folders by extension, logs every action with a timestamp, and prints a summary report.
+
+**Task Manager** — A Flask web app for creating, completing, and deleting tasks, with JSON-based persistence, priority levels, and a progress dashboard.
 
 ---
 
-3️⃣ Sales Analysis
-
-Data analysis project using Pandas and Matplotlib.
-
-Features
-
-- Monthly Sales Analysis
-- Revenue Calculation
-- Best-Selling Products
-- Revenue Ranking
-- Business Insights
-- Automated Charts
-- Data Visualization
-
-Technologies
-
-- Python
-- Pandas
-- Matplotlib
-
----
-
-4️⃣ File Organizer
-
-Automation script that organizes files based on their extensions.
-
-Features
-
-- Automatic Categorization
-- Images
-- Documents
-- Videos
-- Music
-- Compressed Files
-- Activity Logging
-- Statistics Report
-- Duplicate File Protection
-- Execution Summary
-
-Technologies
-
-- Python
-- Pathlib
-- Shutil
-
----
-
-5️⃣ Desktop Notepad
-
-Desktop application built with Tkinter.
-
-Features
-
-- Create Notes
-- Open Files
-- Save Files
-- Toolbar
-- Scrollbar
-- Dark Mode
-- Desktop GUI
-- User-Friendly Interface
-
-Technologies
-
-- Python
-- Tkinter
-
----
-
-🧠 Skills Developed
-
-Throughout this course, I strengthened skills in:
+## 📚 Skills Developed
 
 - Python Programming
 - Problem Solving
-- Software Development
+- Object-Oriented Programming
 - Data Analysis
 - Data Visualization
+- File Handling
 - Web Development
 - Desktop Development
-- File Automation
-- Debugging
-- Documentation
-- Git & GitHub
+- Automation
+- Software Documentation
+- Git Workflow
+- GitHub
 - AI-Assisted Development
-- Project Organization
 
 ---
 
-⚙️ Technologies Used
+## ⚙️ Technologies Used
 
 - Python
 - Flask
 - Pandas
 - Matplotlib
 - Tkinter
+- JSON
+- CSV
 - Pathlib
 - Git
 - GitHub
@@ -204,42 +100,57 @@ Throughout this course, I strengthened skills in:
 
 ---
 
-🏆 Course Certificate
+## 🎓 Course Information
 
-Cursor with Python: Intelligent Development with AI
-
-- Provider: Santander Open Academy
-- Completion Date: June 2026
-- Duration: 8 Hours
+**Course:** Cursor AI + Python: Intelligent Development with AI
+**Provider:** Santander Open Academy
+**Completion:** June 2026
+**Duration:** 8 Hours
 
 ---
 
-👨‍💻 Author
+## 📖 Documentation Standard
 
-Felipe Coelho Linck
+Every project in this repository follows the same documentation structure, so that navigating from one project to another feels consistent:
 
-Administration Student | Process Improvement | Python Enthusiast
+- Professional README
+- Features
+- Technologies Used
+- Project Structure
+- Installation
+- Usage
+- Learning Objectives
+- Future Improvements
+
+This consistency was intentionally adopted across the repository, using a documented Cursor AI prompt workflow (see [`Cursor_AI_Portfolio_Workflow.md`](./Cursor_AI_Portfolio_Workflow.md)) to keep every README aligned in structure, tone, and level of detail.
+
+---
+
+## 🎯 Repository Goals
+
+This repository aims to:
+
+- Document the learning journey through practical Python projects.
+- Showcase working software across web, desktop, automation, and data domains.
+- Demonstrate AI-assisted development with Cursor AI, including the workflow used to produce it.
+- Build a professional GitHub portfolio suitable for technical review.
+- Apply software engineering best practices consistently across every project.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Felipe Coelho Linck**
+
+Administration Student | Python Developer | AI-Assisted Software Development
 
 📍 Brazil
 
-Connect with me
-
-- GitHub: https://github.com/Linck-creator
-- LinkedIn: www.linkedin.com/in/felipe-linck
+- GitHub: [github.com/Linck-creator](https://github.com/Linck-creator)
+- LinkedIn: [linkedin.com/in/felipe-linck](https://www.linkedin.com/in/felipe-linck)
 
 ---
 
-⭐ Final Thoughts
+## ⭐ Final Thoughts
 
-This repository represents my learning journey through Python development and AI-assisted programming using Cursor AI.
-
-Each project contributed to developing practical skills in:
-
-- Programming Logic
-- Automation
-- Data Analysis
-- Web Development
-- Desktop Applications
-- Software Engineering Best Practices
-
-Feel free to explore the projects, provide feedback, and follow my learning journey.
+This repository represents more than the completion of a course — it reflects an ongoing effort to build sound software engineering habits: consistent documentation, organized project structure, and a deliberate, well-documented approach to AI-assisted development. Each project here is a step in that continuing progression, and the repository will keep evolving as new skills and practices are added.
