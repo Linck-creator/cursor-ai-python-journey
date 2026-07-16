@@ -41,6 +41,8 @@ task_manager/
 │   └── index.html         # Main application template
 ├── static/
 │   └── style.css          # Application stylesheet
+├── screenshots/
+│   └── task_manager_preview.png # Application screenshot
 ├── README.md              # Project documentation
 ├── requirements.txt       # Project dependencies
 └── .gitignore             # Git ignore rules
@@ -110,7 +112,9 @@ python app.py
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+![Task Manager Preview](screenshots/task_manager_preview.png)
+
+The interface provides an overview of task statistics, completion progress, priority levels, and pending and completed tasks.
 
 ---
 
@@ -138,6 +142,7 @@ python app.py
 - Search and filtering
 - REST API
 - Docker support
+- Dark mode
 
 ---
 
