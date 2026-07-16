@@ -30,21 +30,16 @@ A modern desktop notepad application built with Tkinter, featuring a clean objec
 ## 📂 Project Structure
 
 ```text
-
 desktop_notepad/
-
 │
-
-├── notes.py          # Main application source code
-
-├── README.md         # Project documentation
-
-├── requirements.txt  # Runtime dependencies
-
-├── .gitignore        # Git ignore rules
-
-└── test_Python.txt   # Example text file
-
+├── notes.py                            # Main application source code
+├── screenshots/
+│   ├── desktop_notepad_preview.png     # Light Mode application screenshot
+│   └── desktop_notepad_dark_mode.png   # Dark Mode application screenshot
+├── README.md                           # Project documentation
+├── test_Python.txt                     # Example text file
+├── requirements.txt                    # Runtime dependencies
+└── .gitignore                          # Git ignore rules
 ```
 
 ---
@@ -98,7 +93,17 @@ The application will launch in a window. Use the menu or toolbar to create, open
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### Light Mode
+
+![Desktop Notepad - Light Mode](screenshots/desktop_notepad_preview.png)
+
+The default Light Mode provides a clean interface for creating, opening, editing, and saving text notes.
+
+### Dark Mode
+
+![Desktop Notepad - Dark Mode](screenshots/desktop_notepad_dark_mode.png)
+
+Dark Mode provides an alternative interface designed for comfortable use in low-light environments.
 
 ---
 
@@ -132,4 +137,4 @@ Developed by **Felipe Coelho Linck**
 
 Administration Student | Python Developer | AI-Assisted Software Development
 
-Created during the **Cursor AI + Python: Intelligent Development with AI** course provided by **Santander Open Academy**.
+Created during the **Cursor AI + Python: Intelligent Development with AI** course provided by **Santander Open Academy**
