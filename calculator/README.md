@@ -2,27 +2,26 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 
-A command-line calculator built with Python that performs basic arithmetic operations with input validation and error handling.
+A basic command-line calculator built with Python. Allows users to perform addition, subtraction, multiplication, and division interactively, with input validation and error handling for invalid input and division by zero.
 
 ---
 
 ## ✨ Features
 
-- Perform addition
-- Perform subtraction
-- Perform multiplication
-- Perform division
-- Continuous interactive operation loop
-- Input validation
-- Division by zero handling
-- Clear error messages
+- Addition, subtraction, multiplication, and division
+- Interactive user input via the command line
+- Continuous calculation loop (performs repeated calculations until "exit" is entered)
+- Typing `"exit"` ends the session
+- Handles invalid operations with clear error messages
+- Handles invalid numeric input with error messages
+- Division by zero is gracefully handled with an error message
 
 ---
 
 ## 🛠 Technologies Used
 
 - Python 3.10+
-- Python Standard Library
+- Uses only the Python Standard Library (no external dependencies)
 
 ---
 
@@ -32,11 +31,11 @@ A command-line calculator built with Python that performs basic arithmetic opera
 calculator/
 │
 ├── calculator.py
-├── calculator.spec
+├── screenshots/
+│   └── calculator_preview.png
 ├── README.md
 ├── requirements.txt
-├── .gitignore
-└── release/
+└── .gitignore
 ```
 
 ---
@@ -73,58 +72,59 @@ calculator/
 
    </details>
 
-4. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   > This project uses only the Python Standard Library. No external packages are required at runtime.
+4. **Dependencies**
+   > This project uses only Python's built-in functionality. No external packages are required at runtime.
 
 ---
 
 ## ▶️ Usage
 
-Execute the script using:
+Run the calculator with:
 
 ```bash
 python calculator.py
 ```
 
-The calculator will:
-- Prompt for an arithmetic operation (`+`, `-`, `*`, `/`) or allow `exit` to quit
-- Request two numeric values
-- Perform the calculation
-- Validate input and display clear error messages for invalid input or division by zero
-- Continue operation until the user types `exit`
+Interaction flow:
+1. When prompted, enter one of the following operations: `+`, `-`, `*`, `/` or type `exit` to quit.
+2. If an operation is selected, enter the first number when asked.
+3. Enter the second number.
+4. The calculator will show the result of the calculation.
+5. Errors will be displayed for invalid number inputs, unsupported operations, or division by zero.
+6. The loop repeats until "exit" is entered.
 
 ---
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### Command-Line Calculator
+
+![Calculator - Execution Preview](screenshots/calculator_preview.png)
+
+The above screenshot shows the calculator performing all four arithmetic operations from the terminal and exiting normally when the user types "exit".
 
 ---
 
 ## 📚 Learning Objectives
 
-- Functions
-- User input
+- Python functions and main entrypoint usage
+- Command-line user input
+- Arithmetic operations
 - Conditional statements
 - Loops
-- Exception handling
-- Input validation
-- Arithmetic operations
-- Command-line applications
+- Error handling with try/except
+- Type conversion of user input
 
 ---
 
 ## 🔮 Future Improvements
 
-- Additional mathematical operations
-- Calculation history
+- Support for additional mathematical operations (e.g. exponentiation, modulus)
+- Calculation history tracking
 - Expression evaluation
 - Unit tests
 - Graphical user interface (GUI)
-- Command-line arguments
+- Enhanced command-line interface and argument support
 
 ---
 
