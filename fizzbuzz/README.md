@@ -16,12 +16,15 @@ A simple Python program that prints numbers from 1 to 50. For multiples of 3, it
 
 ## 📂 Project Structure
 
-```
+```text
 fizzbuzz/
-├── fizzbuzz.py      # Main script implementing the FizzBuzz logic
-├── requirements.txt # Project dependencies (none required at runtime)
-├── .gitignore       # Standard Python and IDE ignores
-├── README.md        # Project overview and instructions
+│
+├── fizzbuzz.py
+├── screenshots/
+│   └── fizzbuzz_preview.png
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ## 🚀 Installation
@@ -31,16 +34,26 @@ fizzbuzz/
    git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
    cd cursor-ai-python-journey/fizzbuzz
    ```
-2. (Optional) Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install project dependencies (optional):
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. (Optional) Create and activate a virtual environment.
+
+<details>
+  <summary>Windows (PowerShell)</summary>
+
+  ```bash
+  python -m venv venv
+  .\venv\Scripts\Activate.ps1
+  ```
+</details>
+
+<details>
+  <summary>Unix / macOS</summary>
+
+  ```bash
+  python -m venv venv
+  source venv/bin/activate
+  ```
+</details>
 
 > This project uses only the Python Standard Library. No external packages are required at runtime.
 
@@ -75,7 +88,13 @@ FizzBuzz
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### FizzBuzz Execution
+
+![FizzBuzz - Execution Preview](screenshots/fizzbuzz_preview.png)
+
+The screenshot shows the FizzBuzz program running successfully in the terminal, printing numbers from 1 to 50 and applying the expected FizzBuzz rules: multiples of 3 are displayed as "Fizz", multiples of 5 as "Buzz", and multiples of both as "FizzBuzz".
+
+---
 
 ## 📚 Learning Objectives
 
