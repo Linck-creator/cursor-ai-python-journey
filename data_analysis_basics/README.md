@@ -1,23 +1,26 @@
-# Data Analysis Basics [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+# Data Analysis Basics 
 
-This project demonstrates basic exploratory data analysis of a CSV dataset using Python. It reads the data, computes descriptive statistics (mean, median, standard deviation) for each column, displays the results in the terminal, and creates a scatter plot comparing Sales and Profit.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+
+A concise introductory project demonstrating basic exploratory data analysis using a CSV dataset with Python, Pandas, and Matplotlib. The script loads tabular data, computes descriptive statistics (mean, median, standard deviation) for each column, prints these results in the terminal, and visualizes the relationship between sales and profit with a scatter plot.
 
 ---
 
 ## ✨ Features
 
-- Reads a CSV file into a Pandas DataFrame
-- Calculates and prints mean, median, and standard deviation for each column
-- Displays computed statistics in the terminal
-- Generates a scatter plot of Sales vs Profit
+- Reads data from a CSV file
+- Loads the dataset into a Pandas DataFrame
+- Calculates and prints the mean, median, and standard deviation for each column
+- Displays descriptive statistics in the terminal
+- Generates a Sales vs Profit scatter plot using Matplotlib
 
 ---
 
 ## 🛠 Technologies Used
 
-- Python
-- pandas
-- matplotlib
+- Python 3.10+
+- Pandas
+- Matplotlib
 
 ---
 
@@ -26,34 +29,49 @@ This project demonstrates basic exploratory data analysis of a CSV dataset using
 ```text
 data_analysis_basics/
 │
-├── parse.py         # Main analysis and visualization script
-├── data.csv         # Example CSV dataset (sales, profit)
-├── README.md        # Project documentation
-├── requirements.txt # Python dependencies
-└── .gitignore       # Version control ignore rules
+├── parse.py
+├── data.csv
+├── screenshots/
+│   └── data_analysis_basics_preview.png
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
 
 ## 🚀 Installation
 
-1. **Clone the repository:**
-   ```
+1. Clone the repository:
+
+   ```bash
    git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
    cd cursor-ai-python-journey/data_analysis_basics
    ```
 
-2. **(Optional) Create a virtual environment:**
-   ```
-   python -m venv venv
-   # On Unix/MacOS:
-   source venv/bin/activate
-   # On Windows:
-   venv\Scripts\activate
-   ```
+2. (Optional) Create and activate a virtual environment.
 
-3. **Install dependencies:**
-   ```
+<details>
+  <summary>Windows (PowerShell)</summary>
+
+  ```bash
+  python -m venv venv
+  .\venv\Scripts\Activate.ps1
+  ```
+</details>
+
+<details>
+  <summary>Unix / macOS</summary>
+
+  ```bash
+  python -m venv venv
+  source venv/bin/activate
+  ```
+</details>
+
+3. Install dependencies:
+
+   ```bash
    pip install -r requirements.txt
    ```
 
@@ -61,36 +79,48 @@ data_analysis_basics/
 
 ## ▶️ Usage
 
-To run the analysis and visualization:
+To run the exploratory data analysis:
 
-```
+```bash
 python parse.py
 ```
 
-The script automatically loads the provided dataset, computes and displays statistics in the terminal, and opens a scatter plot window.
+The script will:
+
+- Load the dataset from `data.csv`
+- Compute and print mean, median, and standard deviation for each column to the terminal
+- Display a Matplotlib scatter plot comparing Sales (X-axis) and Profit (Y-axis)
 
 ---
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### Exploratory Data Analysis
+
+![Data Analysis Basics - Execution Preview](screenshots/data_analysis_basics_preview.png)
+
+The screenshot shows the project running successfully, with descriptive statistics printed in the terminal and a Sales vs Profit scatter plot displayed using Matplotlib.
 
 ---
 
 ## 📚 Learning Objectives
 
-- Reading CSV files with pandas
-- Working with DataFrames for statistical analysis
-- Calculating basic descriptive statistics
-- Visualizing data with matplotlib (scatter plots)
+- Reading CSV files with Pandas
+- Working with DataFrames for analysis
+- Performing basic descriptive statistics: mean, median, standard deviation
+- Visualizing relationships between variables using a scatter plot with Matplotlib
+- Practicing basic exploratory data analysis in Python
 
 ---
 
 ## 🔮 Future Improvements
 
-- Support for custom user-uploaded CSV files
-- Option to export computed statistics to CSV or Excel
-- Enhanced customization for visualizations
+- Support for analyzing custom user-provided CSV files
+- Additional chart types (e.g., histograms, box plots)
+- Correlation analysis between variables
+- Handling missing or invalid data
+- Exporting analysis results to a file
+- Enhanced plot customization and interactivity
 
 ---
 
