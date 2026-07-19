@@ -2,42 +2,41 @@
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 
-A Python utility for command-line analysis of text files. It reads a specified file, extracts all words (case-insensitive), counts the total number of words, and reports the 10 most frequent words. The project demonstrates file handling, regular expressions, word frequency analysis, exception handling, and basic unit testing using object-oriented design.
+A simple Python command-line application for text analysis. This tool reads a user-specified text file, processes the text content, counts the total number of words, and reports the 10 most frequent words. It demonstrates core Python concepts including user input, file reading, text normalization to lowercase, regular expressions for word extraction, word frequency analysis with `collections.Counter`, and error handling for missing files.
 
 ## ✨ Features
 
-- Count the total number of words in a text file  
-- Display the 10 most frequent words along with their counts  
-- User-friendly CLI for reading and analyzing text files  
-- Gracefully handles missing text files using exception handling
+- Prompts the user for the path to a text file
+- Reads and processes the contents of the specified file
+- Converts all text to lowercase for case-insensitive analysis
+- Extracts words using regular expressions
+- Counts the total number of words in the file
+- Calculates word frequencies and displays the 10 most frequent words with counts
+- Uses `collections.Counter` for efficient frequency calculation
+- Handles missing files gracefully with a clear error message
 
 ## 🛠 Technologies Used
 
 - Python 3.10+
 - Python Standard Library
-  - collections
-  - collections.abc
-  - re
-  - typing
+  - `collections.Counter`
+  - `re` (regular expressions)
+
+> This project uses only the Python Standard Library. No external packages are required at runtime.
 
 ## 📂 Project Structure
 
 ```
 word_counter/
-├── counter.py       # Main script: counts words and finds most common terms via CLI
-├── test_counter.py  # WordCounter class and its unit tests
-├── sample.txt       # Example text file for testing the script
-├── .gitignore       # Standard ignores for Python development and editors
-├── README.md        # Project overview and instructions
-└── requirements.txt # Project dependencies
+├── counter.py               # Main script: command-line word counter
+├── test_counter.py          # Auxiliary WordCounter class and unit tests
+├── sample.txt               # Example text file for demonstration
+├── screenshots/
+│   └── word_counter_preview.png  # Screenshot of the program in action
+├── README.md                # Project documentation
+├── requirements.txt         # (Optional) List of dependencies; none required at runtime
+└── .gitignore               # Standard Python and editor ignore rules
 ```
-
-- **counter.py**: Command-line application that reads a text file, normalizes case, counts words, and prints the total and top 10 most frequent word counts using `collections.Counter`.
-- **test_counter.py**: Implements the reusable `WordCounter` class and includes unit tests with simple `assert` statements to validate core logic.
-- **sample.txt**: Example text file included for experimentation or demonstration.
-- **.gitignore**: Lists files and directories to be ignored by Git.
-- **README.md**: Project overview and instructions.
-- **requirements.txt**: Defines the project dependencies.
 
 ## 🚀 Installation
 
@@ -46,17 +45,28 @@ word_counter/
    git clone https://github.com/Linck-creator/cursor-ai-python-journey.git
    cd cursor-ai-python-journey/word_counter
    ```
-2. (Optional) Set up a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-3. Install project dependencies (optional):
-   ```bash
-   pip install -r requirements.txt
-   ```
 
-   > This project uses only the Python Standard Library. No external packages are required at runtime.
+2. (Optional) Set up a virtual environment:
+
+<details>
+<summary>Windows (PowerShell)</summary>
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+</details>
+
+<details>
+<summary>Unix / macOS</summary>
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+</details>
+
+> No external dependencies are required to run the application.
 
 ## ▶️ Usage
 
@@ -64,39 +74,50 @@ word_counter/
    ```bash
    python counter.py
    ```
-2. Enter the path to your text file when prompted.
+2. Enter the path to your text file when prompted (e.g., `sample.txt`).
 
-**Example:**
+**Example session:**
 ```
-Enter the path of the text file:
-sample.txt
-Total words:
-...
+Enter the path of the text file: sample.txt
+Total words: 17
 
 10 most frequent words:
+1. python - 4 times
+2. is - 3 times
+3. amazing - 1 times
+4. easy - 1 times
 ...
 ```
+
+The included `sample.txt` file can be used to try out the program.
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### Word Counter Execution
+
+![Word Counter - Execution Preview](screenshots/word_counter_preview.png)
+
+The screenshot shows the Word Counter running in the terminal, analyzing a sample file, displaying the total word count, and listing the 10 most frequent words.
 
 ## 📚 Learning Objectives
 
-- Reading and processing text files
-- File I/O
-- Regular expressions
-- `collections.Counter`
-- Exception handling
-- Object-Oriented Programming
-- Basic unit testing
+- Reading text files and user input in Python
+- String manipulation and lowercase normalization
+- Extracting words with regular expressions
+- Counting words and analyzing word frequency
+- Using `collections.Counter` for tallies
+- Handling file-related exceptions
+- Writing basic assertion-based tests for an auxiliary WordCounter class
 
 ## 🔮 Future Improvements
 
-- Add command-line arguments for input files and settings
-- Include character and line counting functionality
-- Enhance text preprocessing (e.g., ignoring punctuation or stop words)
-- Integrate more robust automated testing (e.g., with `pytest`)
+- Support for additional file encodings
+- Allow configuring the number of most frequent words displayed
+- Add support for command-line arguments
+- Enhanced text preprocessing (e.g., more robust tokenization, optional exclusion of stop words)
+- Export analysis results (e.g., to CSV or JSON)
+- Provide additional text statistics (character count, line count)
+- Visualization of word frequency distributions
 
 ## 👨‍💻 Author
 
