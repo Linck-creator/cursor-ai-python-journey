@@ -38,6 +38,8 @@ file_organizer/
 │
 ├── organize.py
 ├── test/
+├── screenshots/
+│   └── file_organizer_preview.png
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -88,19 +90,45 @@ pip install -r requirements.txt
 
 ## ▶️ Usage
 
-To organize the contents of the **test/** folder, run:
+To organize your files, follow these steps:
+
+1. Place the files you want to organize **directly** inside the `test/` folder.
+   - Only files located directly inside `test/` will be processed. Existing subfolders and their contents are not scanned.
+
+2. Run the script:
 
 ```bash
 python organize.py
 ```
 
-The script will automatically sort all files in the `test/` folder into categorized subfolders according to their extensions.
+3. The script will automatically:
+   - Detect each file extension.
+   - Move each file into a corresponding category subfolder, based on its extension.
+   - Create category folders as needed. The implemented categories are:
+     - Compressed
+     - Documents
+     - Images
+     - Music
+     - Videos
+     - Others
+
+   Files with extensions not recognized in the predefined categories are placed in the `Others` folder.
+
+Additional behavior:
+- Category folders are always created as necessary.
+- If a file name would overwrite an existing file, the script generates a unique filename.
+- All processing is logged to `test/organization.log`.
+- After processing, the script displays a summary in the terminal, showing the total number of files processed, execution time, category breakdowns, and percentages.
 
 ---
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### File Organization Execution
+
+![File Organizer - Terminal Execution](screenshots/file_organizer_preview.png)
+
+The screenshot shows a successful execution of the File Organizer, including files being automatically moved to their corresponding categories and the final organization summary with processed files, category distribution, percentages, and execution time.
 
 ---
 
