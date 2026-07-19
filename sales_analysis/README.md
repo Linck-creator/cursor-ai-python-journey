@@ -105,7 +105,17 @@ The script will:
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### Monthly Sales Revenue
+
+![Monthly Sales Revenue](venda_por_mes.png)
+
+This chart shows the revenue aggregated by month based on the sales dataset.
+
+### Top Products by Revenue
+
+![Top Products by Revenue](top5_produtos.png)
+
+This chart shows the top products ranked by total revenue.
 
 ---
 
