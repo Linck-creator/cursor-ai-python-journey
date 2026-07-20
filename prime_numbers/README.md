@@ -28,10 +28,12 @@ A Python educational project demonstrating an optimized algorithm for prime numb
 ```text
 prime_numbers/
 │
-├── prime_numbers.py      # Prime number algorithm
-├── README.md             # Project documentation
-├── requirements.txt      # Runtime dependencies
-└── .gitignore            # Git ignore rules
+├── prime_numbers.py
+├── screenshots/
+│   └── prime_numbers_preview.png
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
@@ -91,7 +93,11 @@ The script executes predefined examples and prints whether each tested number is
 
 ## 📸 Preview
 
-> Screenshots will be added in a future update.
+### Prime Number Verification
+
+![Prime Numbers - Execution Preview](screenshots/prime_numbers_preview.png)
+
+The screenshot shows the Prime Numbers project running in the terminal and returning boolean results for the predefined test values.
 
 ---
 
